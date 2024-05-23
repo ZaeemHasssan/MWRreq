@@ -1,0 +1,74 @@
+﻿.main-box span{
+    font-weight:800;
+    font-size:20px;
+
+}
+.page-heading{
+    margin-top:5px;
+    margin-bottom:20px;
+}
+.hideItem { /* Define styles for hidden column */
+    display: none;
+}
+.delete_user_btn {
+    background-color: brown;
+    color: white;
+    border: transparent;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: rgba(0, 0, 0, 10); /* Adjust opacity here */
+}
+
+.custom-modal .modal-content {
+    border: none;
+}
+
+.custom-modal .modal-header {
+    background-color: #3A8508;
+    color: white;
+    padding: 10px 15px;
+}
+
+    .custom-modal .modal-header button {
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 25px;
+    }
+
+.custom-modal .modal-footer {
+    background-color: transparent;
+    color: white;
+    border-top: 1px solid #dee2e6;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+}
+
+    .custom-modal .modal-footer button {
+        background-color: #3A8508;
+        border: none;
+        color: white;
+        font-size: 18px;
+        min-width: 100px;
+        min-height: 38px;
+        border-radius: 5px;
+    }
+
+    .custom-modal .modal-footer .color-danger {
+        background-color: darkred;
+        border: none;
+        color: white;
+        font-size: 18px;
+        min-width: 100px;
+        min-height: 38px;
+        border-radius: 5px;
+    }

@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FFnF_Request</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/fonts/fontawesome-free-6.5.2-web/css/all.min.css" />
+    <link href="https://cdn.datatables.net/v/dt/dt-2.0.7/datatables.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/layout.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm custom-header navbar-toggleable-sm mb-3">
+            <div class="container">
+                <div class="nav-logo">
+                    <a href="/complaints"><img src="../images/logoPNG.png" class="img-fluid nav-logo" alt="profile" /></a>
+                </div>
+                @*<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">*@
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Navigation links here -->
+                </div>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav nav-ul flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-color" href="/request">Request Form</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-color" href="complaints">Quries</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-color dropdown-toggle user-icon" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span><i class="fa-regular fa-user"></i></span>My Account
+                            </a>
+                            <ul class="dropdown-menu nav-drpdwn" aria-labelledby="accountDropdown">
+
+                                <div id="adminLinks" style="display:none;">
+                                    <li class="nav-custom-li">
+                                        <i class="fa-regular fa-user"></i><a href="/createuser">Create User</a>
+                                    </li>
+                                    <li class="nav-custom-li">
+                                        <i class="fa-regular fa-user"></i><a href="/users">Existing Users</a>
+                                    </li>
+                                </div>
+
+                                <li class="nav-custom-li">
+                                    <i class="fa-solid fa-gear"></i><a href="/settings">Settings</a>
+                                </li>
+                                <li class="nav-custom-li">
+                                    <i class="fa-solid fa-right-from-bracket"></i><a class="sign_out" id="signout">Signout</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container body-container">
+
+        <main role="main" class="pb-3">
+            <div id="loader"></div>
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top custom-footer footer">
+        <div class="container">
+            <span>&copy; 2024 - ComplaintSystem - <a asp-area="" asp-page="/Privacy">Privacy</a></span>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/v/dt/dt-2.0.7/datatables.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/layout.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

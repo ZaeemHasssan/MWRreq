@@ -1,0 +1,119 @@
+﻿@* @{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+} *@
+<link rel="stylesheet" href="~/css/Register.css" asp-append-version="true" />
+
+<div class="register-box">
+    <div class="row">
+
+        @* <div class="mb-3 logo-box">
+            <img src="../images/ffnflogo.png" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3" alt="profile" />
+        </div> *@
+
+        <div class="image-outer mt-3">
+            <img src="../images/logoPNG.png" class="cstm-img-fluid" alt="profile" />
+        </div>
+        <span id="responseError" class="error"></span>
+        <div class="reg-form">
+            <div class="mb-3 reg-Title">
+                <span>Register new Account</span>
+            </div>
+            <div class="row">
+                <div class="col-md-6 f-Name">
+                    <div class="mb-3">
+                        <input type="text" id="fName" class="form-control" aria-describedby="emailHelp" placeholder="First Name" />
+                        <span id="fNameError" class="error"></span>
+                    </div>
+                </div>
+                <div class="col-md-6 l-Name">
+                    <div class="mb-3">
+                        <input type="text" id="lName" class="form-control" aria-describedby="emailHelp" placeholder="Last Name" />
+                        <span id="lNameError" class="error"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <input type="text" id="username" class="form-control" aria-describedby="emailHelp" placeholder="User Name" />
+                <span id="usernameError" class="error"></span>
+            </div>
+
+            <div class="mb-3 Discipline-Box">
+                <select required id="disciplineSelect">
+                    <option value="" disabled selected>Select Discipline...</option>
+                    <option value="1">E & I</option>
+                    <option value="2">Mechanical</option>
+                    <option value="3">Central Engineering</option>
+                    <option value="4">Utilities</option>
+                    <option value="5">Quality</option>
+                    <option value="6">Production</option>
+                    <option value="7">Admin</option>
+                    <option value="8">IT</option>
+                    <option value="9">SuperAdmin</option>
+                </select>
+                <span id="disciplineSelectError" class="error"></span>
+            </div>
+
+            <div class="mb-3">
+                <div class="password-eye">
+                    <input type="password" class="form-control" id="loginPasswordInput" placeholder="Enter Password">
+                    <i class="fa-solid fa-eye" id="toggleFirstPassword" style="cursor: pointer;"></i>
+                </div>
+                <span id="passwordError" class="error"></span>
+            </div>
+
+            <div class="mb-3">
+                <div class="password-eye">
+                    <input type="password" class="form-control" id="repeatPasswordInput" placeholder="Repeat Password">
+                    <i class="fa-solid fa-eye" id="toggleRepeatPassword" style="cursor: pointer;"></i>
+                </div>
+                <span id="repeatPasswordError" class="error"></span>
+            </div>
+
+            <div class="mb-3">
+                <div class="role-checkBoxes">
+                    <label class="roles">Permissions:</label>
+                    <div class="form-group adm-chkbox checkbox-labels">
+                        <input type="checkbox" value="1" id="admin" onclick="adminCheckbox()">
+                        <label for="admin">Admin</label>
+                    </div>
+                    <div class="form-group checkbox-labels">
+                        <input type="checkbox" value="2" id="user" onclick="userCheckbox()">
+                        <label for="user">User</label>
+                    </div>
+                </div>
+                <span id="roleError" class="error"></span>
+            </div>
+
+            <div class="mb-3">
+                <div class="submit">
+                    <button type="submit" id="register_submit" class="btn btn-color px-5 mb-5 w-100"> Submit </button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade custom-modal" id="successModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Successfully sent</h5>
+                <button type="button" class="close" onclick="modalClose()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                User Created Successfully.
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="modalClose()">Close</button>
+                <!-- Additional buttons or actions -->
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/register.js" asp-append-version="true"></script>

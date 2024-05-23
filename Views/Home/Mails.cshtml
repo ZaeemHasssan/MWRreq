@@ -1,0 +1,72 @@
+﻿
+<link rel="stylesheet" href="~/css/Mails.css" asp-append-version="true" />
+
+<div class="tabsnav">
+    <ul class="nav nav-pills mb-3 border-bottom border-2" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link fw-semibold active position-relative" id="active-queries-tab" data-bs-toggle="pill" data-bs-target="#active-queries" type="button" role="tab" aria-controls="active-queries" aria-selected="true">My Complaints</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link fw-semibold position-relative" id="resolved-queries-tab" data-bs-toggle="pill" data-bs-target="#resolved-queries" type="button" role="tab" aria-controls="resolved-queries" aria-selected="false">My Resolved Complaints</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link fw-semibold position-relative" id="active-requests-tab" data-bs-toggle="pill" data-bs-target="#active-requests" type="button" role="tab" aria-controls="active-requests" aria-selected="false">Complaints to Solve</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link fw-semibold position-relative" id="resolved-requests-tab" data-bs-toggle="pill" data-bs-target="#resolved-requests" type="button" role="tab" aria-controls="resolved-requests" aria-selected="false">Resolved Complaints</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link fw-semibold position-relative" id="pills-Trash-tab" data-bs-toggle="pill" data-bs-target="#pills-Trash" type="button" role="tab" aria-controls="pills-Trash" aria-selected="false">Trash</button>
+        </li>
+    </ul>
+    <div class="tab-content border rounded-3 border-theme" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="active-queries" role="tabpanel" aria-labelledby="active-queries-tab">
+            
+        </div>
+        <div class="tab-pane fade" id="resolved-queries" role="tabpanel" aria-labelledby="resolved-queries-tab">
+           
+        </div>
+        <div class="tab-pane fade" id="active-requests" role="tabpanel" aria-labelledby="active-requests-tab">
+            
+        </div>
+        <div class="tab-pane fade" id="resolved-requests" role="tabpanel" aria-labelledby="resolved-requests-tab">
+            
+        </div>
+        <div class="tab-pane fade" id="pills-Trash" role="tabpanel" aria-labelledby="pills-Trash-tab">
+            <h2>Trash</h2>
+            <p>Deleted items </p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+@* <div class="modal fade custom-modal" id="successModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Close Complaint</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body closeModal">
+                <div class="form-group adm-chkbox checkbox-labels">
+                    <input type="checkbox" value="Close" id="resolved" onclick="resolvedCheckbox()">
+                    <label for="resolved">Resolved</label>
+                </div>
+                <div class="form-group checkbox-labels">
+                    <input type="checkbox" value="other" id="other" onclick="otherCheckbox()">
+                    <label for="other">Other</label>
+                </div>
+                <div class="close_req_textarea">
+                    <textarea type="text" id="closeReasonInput" class="form-control" placeholder="Reason (if any...)"></textarea>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="modalSubmit()">Submit</button>
+            </div>
+        </div>
+    </div>
+</div> *@
+<script src="~/js/mails.js" asp-append-version="true"></script>

@@ -1,0 +1,45 @@
+﻿@{
+    Layout = null;
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<script src="https://code.jquery.com/jquery-3.7.1.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="~/css/Login.css" asp-append-version="true" />
+<div class="container">
+    <div class="row">
+        <div class="login-form">
+            <div class="my-5">
+                <form class="card-body cardbody-color p-lg-5">
+                    @* <div class="text-center">
+                        <img src="../images/ffnflogo.png" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3" width="200px" alt="profile" />
+                    </div> *@
+
+                    <div class="image-outer">
+                        <img src="../images/logoPNG.png" class="cstm-img-fluid" alt="profile" />
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="User Name" id="username"/>
+                        <span id="usernameError" class="error"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="password-eye">
+                            <input type="password" class="form-control" id="password" placeholder="Enter Password">
+                        <i class="fa-solid fa-eye" id="togglePassword" style="cursor: pointer;"></i>
+                        </div>
+                        <span id="passwordError" class="error"></span>
+                        <span id="UNandPassError" class="error"></span>
+                    </div>
+                    <div class="text-center">
+                        <div class="login-btn">
+                            <button id="loginBtn">Login</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/login.js" asp-append-version="true"></script>

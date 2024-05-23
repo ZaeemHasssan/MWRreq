@@ -1,0 +1,78 @@
+﻿
+<link rel="stylesheet" href="~/css/AccountSettings.css" asp-append-version="true" />
+
+<div class="register-box">
+    <div class="row">
+
+        
+        <div class="image-outer mt-3">
+            <img src="../images/logoPNG.png" class="cstm-img-fluid" alt="profile" />
+        </div>
+
+        <div class="reg-form">
+            <div class="mb-3 reg-Title">
+                <span>Change Existing Account Password</span>
+            </div>
+
+            <div class="mb-3">
+                <input class="form-control" id="username" aria-describedby="emailHelp" readonly/>
+            </div>
+            
+            <div class="mb-3">
+                <div class="password-eye">
+                    <input type="password" class="form-control" id="oldPasswordInput" placeholder="Old Password">
+                    <i class="fa-solid fa-eye" id="toggleOldPassword" style="cursor: pointer;"></i>
+                </div>
+                <span id="oldPasswordError" class="error"></span>
+                
+            </div>
+
+            <div class="mb-3">
+                <div class="password-eye" >
+                    <input type="password" class="form-control" id="newPasswordInput" placeholder="New Password">
+                    <i class="fa-solid fa-eye" id="toggleNewPassword" style="cursor: pointer;"></i>
+                </div>
+                <span id="newPasswordError" class="error"></span>
+            </div>
+
+            <div class="mb-3">
+                <div class="password-eye">
+                     <input type="password" class="form-control" id="repeatNewPasswordInput" placeholder="Repeat New Password">
+                     <i class="fa-solid fa-eye" id="toggleRepeatNewPassword" style="cursor: pointer;"></i>
+                </div>
+                <span id="repeatNewPasswordError" class="error"></span>
+            </div>
+
+
+            <div class="mt-4 mb-3">
+                <div class="submit">
+                    <button type="submit" id="changePassword_submit" class="btn btn-color px-5 mb-5 w-100"> Submit </button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade custom-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Success</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Password changed successfully.
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="modalClose()">Close</button>
+                <!-- Additional buttons or actions -->
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/accountSettings.js" asp-append-version="true"></script>

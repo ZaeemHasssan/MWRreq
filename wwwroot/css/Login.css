@@ -1,0 +1,84 @@
+﻿.row {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.image-outer {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cstm-img-fluid {
+    max-width: 130px;
+    height: 120px;
+}
+
+.btn-color {
+    background-color: #0e1c36;
+    color: #fff;
+}
+.btn-color:hover {
+    background-color: #0e1c36;
+    color: #fff;
+}
+
+.profile-image-pic {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+
+.login-form {
+    max-width: 550px;
+    margin: auto
+}
+
+.cardbody-color {
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-bottom: 0;
+    border-radius: 10px;
+    border:1px solid rgba(0,0,0,.125)
+}
+
+a {
+    text-decoration: none;
+}
+
+.password-eye {
+    display: flex;
+}
+
+    .password-eye i {
+        margin-left: -30px;
+        line-height: 2.4;
+        cursor: pointer;
+    }
+
+.login-btn {
+    /*background-color: #3A8508;
+    color:white;
+    min-height:38px;
+    line-height:38px;
+    border-radius:5px;*/
+    
+}
+    .login-btn button {
+        cursor: pointer;
+        background-color: #3A8508;
+        color: white;
+        min-height: 38px;
+        line-height: 38px;
+        border-radius: 5px;
+        width: 100%;
+        outline: none;
+        border: transparent;
+    }
+    
+.error {
+    color: red;
+    font-size: 12px;
+}

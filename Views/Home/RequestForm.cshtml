@@ -1,0 +1,147 @@
+﻿<link rel="stylesheet" href="~/css/RequestForm.css" asp-append-version="true" />
+
+<form class="Complaint-form">
+    <table class="main-table">
+        <tr>
+            <th colspan="6">QUALITY RECORDS</th>
+        </tr>
+
+        <tr>
+            <td colspan="2" rowspan="2" class="text-center logo-td">
+                <img src="../images/ffnflogo.png" class="img-fluid logo" alt="profile" />
+            </td>
+            <td colspan="4" class="text-center custom-fw-bold">
+                Title: Maintenance Work Request
+            </td>
+        </tr>
+
+        <tr>
+            <td class="custom-fw-bold pl10">Document #:</td>
+            <td class="pl10">QR/TECH/03</td>
+            <td class="custom-fw-bold pl10">Rev #</td>
+            <td class="pl10">02</td>
+        </tr>
+
+        <tr>
+            <td colspan="2" class="text-center custom-fw-bold pl10">
+                Fauji Fresh n Freeze Limited
+            </td>
+            <td class="custom-fw-bold pl10">Effective Date</td>
+            <td class="pl10">1-6-2020</td>
+            <td class="pl10">Page</td>
+            <td class="pl10">1 of 1</td>
+        </tr>
+    </table>
+
+    <div class="sec-1-Header">
+        <label>Section 1.</label><span> To be filled by the Requester</span>
+    </div>
+
+    <div class="sec-1-Form">
+        <div class="form-R-1">
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="date-time-box">
+                        <Label>Date & Time:</Label>
+                        <input type="" class="custom-form-control cstm-disable" id="dateTime" readonly disabled/>
+                        <span id="dateTimeError" class="error"></span>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+                    <div class="work-area">
+                        <label>Work Area:</label>
+                        <div>
+                            <input type="text" class="custom-form-control" id="workArea"/>
+                            <span id="workAreaError" class="error"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="form-R-2">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="Priority-Box">
+                        <label> Priority:</label>
+                        <select class="form-select form-select-lg" id="prioritySelect" aria-label=".form-select-lg example" required>
+                            <option value="" disabled selected>Open this select menu</option>
+                            <option value="Emergency">Emergency</option>
+                            <option value="Normal">Normal</option>
+                        </select>
+                        <span id="prioritySelectError" class="error"></span>
+                    </div>
+
+                </div>
+                <div class="col-md-6 priority-Box">
+                    <div class="Discipline-Box">
+                        <label>Discipline:</label>
+                        <select class="form-select form-select-lg" id="disciplineSelect" aria-label=".form-select-lg example" required>
+                            <option value="" disabled selected>Select Discipline...</option>
+                            <option value="1">E & I</option>
+                            <option value="2">Mechanical</option>
+                            <option value="3">Central Engineering</option>
+                            <option value="4">Utilities</option>
+                            <option value="5">Quality</option>
+                            <option value="6">Production</option>
+                            <option value="7">Admin</option>
+                            <option value="8">IT</option>
+                        </select>
+                        <span id="disciplineSelectError" class="error"></span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="Description-box">
+            <div class="des-Title">
+                <span>
+                    <label>Description of Work: </label> (mention job to be done in detail
+                    with area and equipment)
+                </span>
+            </div>
+            <div class="prac">
+                <textarea id="description"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="qualityCheck">
+                <label for="qualityCheck">Quality Check</label>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <div class="submit btn-theme">
+                <button type="button" id="submit_Request"> Submit </button>
+            </div>
+        </div>
+
+
+    </div>
+</form>
+<!-- Modal -->
+<div class="modal fade custom-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Successfully sent</h5>
+                <button type="button" class="close" onclick="modalClose()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="modalClose()">Close</button>
+                <!-- Additional buttons or actions -->
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/requestForm.js" asp-append-version="true"></script>
